@@ -1,0 +1,37 @@
+# Todo lo que genera la compilación va a out/ y no se versiona.
+out/*
+!out/.gitkeep
+
+# Auxiliares de LaTeX, por si alguna vez se compila fuera de out/.
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+*.glg
+*.glo
+*.gls
+*.xdv
+missfont.log
+
+# Los PDF compilados viven en out/, ya ignorado arriba. No se ignora *.pdf en
+# general porque las figuras de los documentos suelen estar en ese formato.
+
+# Editores y sistema
+*.bak
+*~
+.DS_Store
