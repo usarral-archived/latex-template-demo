@@ -1,4 +1,19 @@
-# Plantilla LaTeX con devcontainer
+# Demo de la plantilla LaTeX
+
+Repositorio de prueba creado con `./doc repo` desde
+[usarral/latex-template-devcontainer](https://github.com/usarral/latex-template-devcontainer),
+para comprobar el flujo completo: crear el repo, añadir una plantilla propia
+(`plantillas/receta/`, que no viene en la original) y escribir varios documentos.
+
+Contiene tres documentos de ejemplo, uno por cada tipo de plantilla usada:
+
+| Documento | Plantilla | Qué enseña |
+| --------- | --------- | ---------- |
+| `guia-rapida` | `informe` | Portada, índice, cajas y bibliografía |
+| `tortilla-de-patatas` | `receta` (propia) | Una plantilla añadida a mano, con sus propios comandos |
+| `apuntes-de-latex` | `apuntes` | Cajas, listados de código y tablas |
+
+---
 
 Repositorio para escribir **varios documentos** LaTeX en español compartiendo
 estilo, con un contenedor que trae todo lo necesario para compilarlos. No hace

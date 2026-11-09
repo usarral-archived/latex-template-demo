@@ -1,0 +1,58 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{plantilla}
+
+\titulo{Apuntes de LaTeX}
+\autor{Carlos Sesma}
+
+\begin{document}
+
+\portada
+\indice
+
+\section{Estructura de un documento}
+
+Todo documento declara una clase, carga paquetes en el preámbulo y abre el
+entorno \texttt{document}. En este repositorio el preámbulo ya está resuelto por
+\texttt{plantilla.sty}.
+
+\begin{nota}[Definición]
+    El \emph{preámbulo} es todo lo que va entre
+    \texttt{\textbackslash documentclass} y
+    \texttt{\textbackslash begin\{document\}}. Ahí se carga lo que el documento
+    necesita, pero no se escribe contenido.
+\end{nota}
+
+\section{Referencias cruzadas}
+
+\texttt{\textbackslash label} marca y \texttt{\textbackslash ref} cita. LaTeX
+necesita dos pasadas para resolverlas, por eso se usa latexmk: repite la
+compilación hasta que los números dejan de cambiar.
+
+\begin{aviso}[Cuidado]
+    Un \texttt{\textbackslash ref} a una etiqueta inexistente no rompe la
+    compilación: imprime \texttt{??} y deja solo un aviso en el log. Conviene
+    leer los avisos aunque salga el PDF.
+\end{aviso}
+
+\section{Código}
+
+El estilo de los listados viene dado por la plantilla.
+
+\begin{lstlisting}[language=Python,caption={Un ejemplo cualquiera}]
+def factorial(n):
+    return 1 if n <= 1 else n * factorial(n - 1)
+\end{lstlisting}
+
+\section{Tablas}
+
+\begin{center}
+    \begin{tabular}{lr}
+        \textbf{Comando} & \textbf{Pasadas} \\
+        \hline
+        pdflatex         & 1                \\
+        biber            & 1                \\
+        pdflatex         & 2                \\
+    \end{tabular}
+\end{center}
+
+\end{document}

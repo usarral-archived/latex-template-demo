@@ -1,0 +1,44 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{plantilla}
+
+\titulo{{{TITULO}}}
+\autor{{{AUTOR}}}
+
+% Una plantilla puede añadir lo suyo encima de plantilla.sty: aquí, una ficha
+% con los datos de cabecera de la receta.
+\newcommand{\ficha}[3]{%
+    \begin{center}
+        \begin{tabular}{l@{\quad}l@{\quad}l}
+            \textbf{Raciones} & \textbf{Preparación} & \textbf{Cocción} \\
+            #1                & #2                   & #3               \\
+        \end{tabular}
+    \end{center}
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries \eltitulo}
+\end{center}
+
+\ficha{4}{20 min}{35 min}
+
+\section{Ingredientes}
+
+\begin{itemize}
+    \item Ingrediente uno
+    \item Ingrediente dos
+\end{itemize}
+
+\section{Elaboración}
+
+\begin{enumerate}
+    \item Primer paso.
+    \item Segundo paso.
+\end{enumerate}
+
+\begin{nota}[Truco]
+    Un consejo que conviene no olvidar.
+\end{nota}
+
+\end{document}

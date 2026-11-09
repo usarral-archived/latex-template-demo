@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{plantilla}
+
+\titulo{Tortilla de patatas}
+\autor{Carlos Sesma}
+
+% Una plantilla puede añadir lo suyo encima de plantilla.sty: aquí, una ficha
+% con los datos de cabecera de la receta.
+\newcommand{\ficha}[3]{%
+    \begin{center}
+        \begin{tabular}{l@{\quad}l@{\quad}l}
+            \textbf{Raciones} & \textbf{Preparación} & \textbf{Cocción} \\
+            #1                & #2                   & #3               \\
+        \end{tabular}
+    \end{center}
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries \eltitulo}
+\end{center}
+
+\ficha{4}{20 min}{25 min}
+
+\section{Ingredientes}
+
+\begin{itemize}
+    \item 6 patatas medianas
+    \item 6 huevos
+    \item 1 cebolla (opcional, según bando)
+    \item Aceite de oliva y sal
+\end{itemize}
+
+\section{Elaboración}
+
+\begin{enumerate}
+    \item Pelar y cortar las patatas en láminas finas. Salar.
+    \item Confitarlas a fuego suave en abundante aceite, sin que lleguen a
+          dorarse, unos 20 minutos.
+    \item Escurrir bien y mezclar con los huevos batidos. Dejar reposar
+          5 minutos.
+    \item Cuajar en la sartén a fuego medio, dando la vuelta una vez.
+\end{enumerate}
+
+\begin{nota}[Truco]
+    El reposo antes de cuajar es lo que une la patata con el huevo. Saltárselo
+    es la causa habitual de que la tortilla se desmonte al girarla.
+\end{nota}
+
+\begin{aviso}[Cuidado]
+    Si el aceite humea, la patata se fríe en vez de confitarse y la textura
+    cambia por completo.
+\end{aviso}
+
+\end{document}

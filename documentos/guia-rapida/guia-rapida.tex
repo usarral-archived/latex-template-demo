@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[bibliografia]{plantilla}
+
+\titulo{Guía rápida de la plantilla}
+\autor{Carlos Sesma}
+\subtitulo{Cómo escribir documentos en este repositorio}
+
+\begin{document}
+
+\portada
+\indice
+
+\section{Qué hay aquí}
+
+Este repositorio aloja varios documentos LaTeX que comparten estilo. Cada uno
+vive en su propia carpeta dentro de \texttt{documentos/}, con su bibliografía y
+sus imágenes, y todos los PDF se generan en \texttt{out/}.
+
+El preámbulo común está en \texttt{comun/plantilla.sty}, así que un documento
+no repite la lista de paquetes: se limita a cargar la plantilla y a declarar
+sus datos.
+
+\section{Crear un documento}
+
+\begin{lstlisting}[language=bash,caption={Crear y compilar}]
+./doc nuevo       # pregunta plantilla, titulo y autor
+./doc compila     # genera los PDF en out/
+./doc lista       # que hay y que esta compilado
+\end{lstlisting}
+
+\begin{nota}
+    \texttt{./doc nuevo} también admite argumentos
+    (\texttt{-{}-plantilla}, \texttt{-{}-titulo}, \texttt{-{}-autor}) para
+    usarlo desde un script.
+\end{nota}
+
+\section{Plantillas}
+
+Las plantillas son carpetas en \texttt{plantillas/}. Este repositorio añade una
+propia, \texttt{receta}, que no venía en la original: basta con crear la carpeta
+con un \texttt{documento.tex} y un \texttt{plantilla.conf}, y la CLI la ofrece
+en el menú sin tocar una línea de código.
+
+\section{Qué aporta la plantilla}
+
+Además de los paquetes, \texttt{plantilla.sty} define la portada, el índice y
+las cajas destacadas.
+
+\begin{aviso}
+    Los documentos que no citan nada se declaran con
+    \texttt{\textbackslash usepackage\{plantilla\}} a secas, sin la opción
+    \texttt{bibliografia}, y así no arrastran biber.
+\end{aviso}
+
+Para el detalle tipográfico, la referencia sigue siendo la de siempre
+\cite{knuth1984}.
+
+\printbibliography
+
+\end{document}
